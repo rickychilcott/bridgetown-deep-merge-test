@@ -20,7 +20,22 @@
 url: "" # the base hostname & protocol for your site, e.g. https://example.com
 
 permalink: pretty
-template_engine: liquid
+template_engine: erb
+
+
+collections:
+  articles:
+    output: true
+
+defaults:
+  - scope:
+      collection: "articles"
+    values:
+      layout: default
+      first_level: "via config"
+      second_level:
+        via_config: "via config"
+
 
 # Other options you might want to investigate:
 #
